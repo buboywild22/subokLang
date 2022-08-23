@@ -1,0 +1,1 @@
+Mga men done nako sa modal ng each item at js kaso my bug pag more than 7 items yung nasa cart auto print ulit yung first 7 items at di nag proceed yung pang 8th item - Jerrico
