@@ -1,0 +1,2 @@
+# subokLang
+try muna syempre
