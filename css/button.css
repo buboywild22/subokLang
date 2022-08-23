@@ -1,3 +1,20 @@
 .addItemResize{
     width:150px;
 }
+
+.adjustCaptionC1{
+   left: -500px;
+   top:400px;
+}
+.adjustCaptionC2{
+   left: -500px;
+   top:300px;
+}
+.adjustCaptionC3{
+   left: -500px;
+   top:350px;
+}
+.adjustCaptionC4{
+   left: -500px;
+   top:350px;
+}
