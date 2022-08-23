@@ -35,7 +35,7 @@ function displayItems(){
         <tr>
             <th scope="row">`+cartArray[i].id+`</th>
             <td>`+cartArray[i].name+`</td>
-            <td><input type="text" class="form-control" id="item" value="`+cartArray[i].quantity+`"></td>
+            <td><input type="number" class="form-control" id="item" value="`+cartArray[i].quantity+`"></td>
             <td>`+cartArray[i].currentitemprice+`</td>
             <td>`+cartArray[i].overallitemprice+`</td>
         </tr>
