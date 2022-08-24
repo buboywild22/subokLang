@@ -32,12 +32,12 @@ function item3(){
     document.getElementById("counterId").innerHTML = cartArray.length;
 }
 function item4(){
-    var img = "img/Find X-navigation-Lamborghini-v2.png.thumb.webp";
+    var img = "img/Find X-navigation-Red-v2.png.thumb.webp";
     var itemquantity = parseInt(document.getElementById("item4value").value);
     var price = 13500;
     totalQuantity=+itemquantity;
     var totalPrice = itemquantity * price;
-    cartArray.push({id:04,name:"Find X Lamborgini",imgpath:img,quantity:totalQuantity,currentitemprice:price,overallitemprice:totalPrice});
+    cartArray.push({id:04,name:"Find X Red",imgpath:img,quantity:totalQuantity,currentitemprice:price,overallitemprice:totalPrice});
     document.getElementById("counterId").innerHTML = cartArray.length;
 }
 function item5(){
@@ -236,13 +236,13 @@ function displayItems(){
             <td>`+cartArray[i].name+`</td>
             <td><img src="`+cartArray[i].imgpath+`" class="tableImg"/></td>
             <td><input type="number" class="form-control" id="item" value="`+cartArray[i].quantity+`"></td>
-            <td>`+cartArray[i].currentitemprice+`</td>
-            <td>`+cartArray[i].overallitemprice+`</td>
+            <td>₱`+cartArray[i].currentitemprice+`</td>
+            <td>₱`+cartArray[i].overallitemprice+`</td>
         </tr>
         `
     }
     console.log(subtotal);
     document.getElementById("subTotal").innerHTML = `
-    <p><strong>Subtotal:  `+subtotal+`</strong>
+    <p><strong>Subtotal:  ₱`+subtotal+`</strong>
     `;
 }
