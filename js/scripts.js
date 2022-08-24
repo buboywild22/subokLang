@@ -222,7 +222,7 @@ function item24(){
 }
 function displayItems(){
     document.getElementById("checkOutTable").innerHTML = "";
-
+    subtotal=0;
     for(var i=0;i<cartArray.length;i++){
         subtotal += cartArray[i].overallitemprice;
     }
