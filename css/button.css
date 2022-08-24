@@ -23,3 +23,16 @@
     height: 130px;
     width: 100px;
 }
+
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+   
+ }
+
+@media screen and (max-width: 480px) {
+   .tableImg{
+      height: 55px;
+      width: 50px;
+  }
+  
+ }
