@@ -1,2 +1,0 @@
-# subokLang
-try muna syempre
