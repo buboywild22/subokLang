@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/button.css">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">E-Commerce Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#scrollToProducts">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#scrollToProducts">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#scrollToProducts">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#cartModal" type="submit" onclick="displayItems()">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-success text-white ms-1 rounded-pill" id="counterId">0</span>
+                        </button>
+
+                        <!--Cart Modal-->
+                        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                  <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                              <tr class="table-primary">
+                                                <th scope="col">Item ID</th>
+                                                <th scope="col">Item Name</th>
+                                                <th scope="col">Item Image</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Total</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="checkOutTable">
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    
+                                      <div class="d-flex justify-content-end">
+                                        <div class="col-3 align-self-end text-center" id="subTotal"></div>
+                                      </div>
+                                      <div class="container">
+                                        <div class="row">
+                                            
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-success"><i class="bi-cart-fill me-1"></i> Check Out</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/reno8-5g-en/topbanner/final/reno8-Shimmer-Gold-2880_1440-pc.jpg.thumb.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block adjustCaptionC1">
+                  <h3>OPPO Reno8 Series 5G</h3>
+                  <p>The Portrait Expert</p>
+                  <button type="button" class="btn btn-primary">Learn More</button>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/find-x5-pro-en/topbanner/findx5-pro-pc.jpg.thumb.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block adjustCaptionC2">
+                  <h3>OPPO Find X5 Pro 5G</h3>
+                  <p>Empower Every Moment</p>
+                  <button type="button" class="btn btn-primary">Learn More</button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a57-en/topbanner/A57-2880x1440.png.thumb.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block adjustCaptionC3">
+                  <h3>OPPO A57</h3>
+                  <button type="button" class="btn btn-primary">Learn More</button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://image.oppo.com/content/dam/oppo/ph/mkt/homepage/top-banner/OPPO_WatchFree_2880x1440.jpg.thumb.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block adjustCaptionC4">
+                  <h1>OPPO Watch Free</h1>
+                  <p><lead>Night & Day, Work & Play</lead></p>
+                  <button type="button" class="btn btn-primary">Learn More</button>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- Section-->
+        <section class="py-5" id="scrollToProducts">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                    <div class="col mb-5"> <!--item 1-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/A76-listpage-blue.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">A76</h5>
+                                    <!-- Product price-->
+                                    ₱12000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#item1Modal">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="item1Modal" tabindex="-1" aria-labelledby="item1ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="#my-modal" aria-label="Close"></button>
+                                        </div>
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/A76-listpage-blue.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">OPPO A76</h5>
+                                                        <!-- Product price-->
+                                                        ₱12000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" id="item1value">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item1()" id="item1Btn">Add to cart</a></div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                            </div>
+                                        </div>   
+                                    </div> 
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 2-->
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/A96-navigation-pink-v1.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">A96</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through"></span>
+                                    ₱12500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal2">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/A96-navigation-pink-v1.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">OPPO A96</h5>
+                                                        <!-- Product price-->
+                                                        ₱12500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" id="item2value">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item2()">Add to cart</a></div>        
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 3-->
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X-navigation-Lamborghini-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X Lamborghini</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through"></span>
+                                    ₱13000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal3">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X-navigation-Lamborghini-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X Lamborghini</h5>
+                                                        <!-- Product price-->
+                                                        ₱13000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item3value">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item3()">Add to cart</a></div>
+                                                
+                                                </div>
+                                         </div>
+                                        </div>
+                                    
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 4-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X-navigation-Red-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X Red</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱13500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal4">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X-navigation-Red-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X Red</h5>
+                                                        <!-- Product price-->
+                                                        ₱13500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Find X Red</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item4value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item4()">Add to cart</a></div>
+                                                
+                                                </div>
+                                           </div>        
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 5-->
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X2 Pro-navigation-Lamborghini-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X2 Pro Lamborghini</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through"></span>
+                                    ₱14000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal5">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X2 Pro-navigation-Lamborghini-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X2 Pro Lamborghini</h5>
+                                                        <!-- Product price-->
+                                                        ₱14000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item5value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item5()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 6-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X2 Pro-navigation-Orange-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X2 Pro Orange</h5>
+                                    <!-- Product price-->
+                                    ₱14500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal6">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X2 Pro-navigation-Orange-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X2 Pro Orange</h5>
+                                                        <!-- Product price-->
+                                                        ₱14500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item6value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item6()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 7-->
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X2-navigation-Black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X2 Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through"></span>
+                                    ₱15000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal7">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X2-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X2 Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱15000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item7value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item7()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5"> <!--item 8-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Find X3 series-navigation-black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X3 Series Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱15500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal8">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Find X3 series-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X3 Series Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱15500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item8value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item8()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 9-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/findx5-black-navigation-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X5 Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱16000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal9">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/findx5-black-navigation-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X5 Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱16000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item9value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item9()">Add to cart</a></div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 10-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/findx5-pro-white-navigation-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X5 Pro White</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱16500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal10">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/findx5-pro-white-navigation-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X5 Pro White</h5>
+                                                        <!-- Product price-->
+                                                        ₱16500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item10value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item10()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 11-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Navigation-SunsetOrange-427_600-pc.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X5 Pro Sunset Orange</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱17000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal11">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Navigation-SunsetOrange-427_600-pc.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X5 Pro Sunset Orange</h5>
+                                                        <!-- Product price-->
+                                                        ₱17000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item11()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 12-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Phone-list-product-list-stellar-black-427-x-600.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Find X5 Pro Stellar Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱17500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal12">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Phone-list-product-list-stellar-black-427-x-600.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Find X5 Pro Stellar Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱17500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item12value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item12()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno 10x-navigation-Green-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno 10x Green</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱18000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal13">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno 10x-navigation-Green-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno 10x Green</h5>
+                                                        <!-- Product price-->
+                                                        ₱18000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item13value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item13()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 14-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno-navigation-Black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno 10x Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱18500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal14">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno 10x Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱18500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item14value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item14()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 15-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno3 Pro-Raphael4G-navigation-Blue-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno3 Pro Raphael 4G</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱19000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal15">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno3 Pro-Raphael4G-navigation-Blue-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno3 Pro Raphael 4G</h5>
+                                                        <!-- Product price-->
+                                                        ₱19000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item15value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item15()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 16-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno3-Lisa4G-navigation-Black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno3 Lisa 4G</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱19500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal16">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno3-Lisa4G-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno3 Lisa 4G</h5>
+                                                        <!-- Product price-->
+                                                        ₱19500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item16value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item16()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 17-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno4 Pro-5G-navigation-Black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno4 Pro 5G Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱20000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal17">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno4 Pro-5G-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno4 Pro 5G Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱20000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item17value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item17()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 18-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno4-5G-navigation-Blue-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno4 5G Blue</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱20500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal18">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno4-5G-navigation-Blue-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno4 5G Blue</h5>
+                                                        <!-- Product price-->
+                                                        ₱20500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item18value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item18()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 19-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno4-z-navigation-White-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno4 Z White</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱21000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal19">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno4-z-navigation-White-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno4 Z White</h5>
+                                                        <!-- Product price-->
+                                                        ₱21000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item19value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item19()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 20-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno5-4G-navigation-black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno5 4G Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱21500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal20">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno5-4G-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno5 4G Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱21500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item20value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item20()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 21-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno5-5G-navigation-silver-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno5 5G Silver</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱22000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal21">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno5-5G-navigation-silver-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno5 5G Silver</h5>
+                                                        <!-- Product price-->
+                                                        ₱22000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item21value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item21()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 22-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno5-pro-chaka-navigation-black-v2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno5 Pro Chaka Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱22500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal22">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno5-pro-chaka-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno5 Pro Chaka Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱22500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item22value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item22()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 23-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/Reno7_navigation-black_2.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno7 Black</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱23000
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal23">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal23" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/Reno7_navigation-black_2.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno7 Black</h5>
+                                                        <!-- Product price-->
+                                                        ₱23000
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item23value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item23()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5"> <!--item 24-->
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="./img/reno8-pro-glazed-green-427_600-pc.png.thumb.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Reno8 Pro Glazed-Green</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱23500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal24">Add to Cart</button></div>
+                            </div>
+
+                            <div class="modal fade" id="exampleModal24" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-body">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <div class="p-2">
+                                                    <img src="./img/reno8-pro-glazed-green-427_600-pc.png.thumb.webp" class="img-fluid" alt="..." />
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="text-center">
+                                                        <!-- Product name-->
+                                                        <h5 class="fw-bolder">Reno8 Pro Glazed-Green</h5>
+                                                        <!-- Product price-->
+                                                        ₱23500
+                                                    </div>
+                                                    <hr>
+                                                    <label for="basic-url" class="form-label">Quantity</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="item24value" aria-describedby="basic-addon3">
+                                                    </div>
+                                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="item24()">Add to cart</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; E-Commerce Shop 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
