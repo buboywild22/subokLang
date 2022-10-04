@@ -18,19 +18,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="#!">E-Commerce Shop</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><a class="dropdown-item" href="#scrollToProducts">All Products</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#scrollToProducts">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#scrollToProducts">New Arrivals</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -50,20 +49,23 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <table class="table align-middle">
-                                        <thead>
-                                          <tr class="table-primary">
-                                            <th scope="col">Item ID</th>
-                                            <th scope="col">Item Name</th>
-                                            <th scope="col">Item Image</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Total</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody id="checkOutTable">
-                                        </tbody>
-                                      </table>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                              <tr class="table-primary">
+                                                <th scope="col">Item ID</th>
+                                                <th scope="col">Item Name</th>
+                                                <th scope="col">Item Image</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Total</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="checkOutTable">
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    
                                       <div class="d-flex justify-content-end">
                                         <div class="col-3 align-self-end text-center" id="subTotal"></div>
                                       </div>
@@ -136,7 +138,7 @@
             </button>
           </div>
         <!-- Section-->
-        <section class="py-5">
+        <section class="py-5" id="scrollToProducts">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
@@ -168,7 +170,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/A76-listpage-blue.png.thumb.webp" alt="..." />
+                                                    <img src="./img/A76-listpage-blue.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -228,7 +230,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/A96-navigation-pink-v1.png.thumb.webp" alt="..." />
+                                                    <img src="./img/A96-navigation-pink-v1.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -279,7 +281,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X-navigation-Lamborghini-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X-navigation-Lamborghini-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -337,7 +339,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X-navigation-Red-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X-navigation-Red-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -389,7 +391,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X2 Pro-navigation-Lamborghini-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X2 Pro-navigation-Lamborghini-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -437,7 +439,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X2 Pro-navigation-Orange-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X2 Pro-navigation-Orange-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -496,7 +498,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X2-navigation-Black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X2-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -552,7 +554,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Find X3 series-navigation-black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Find X3 series-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -609,7 +611,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/findx5-black-navigation-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/findx5-black-navigation-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -667,7 +669,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/findx5-pro-white-navigation-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/findx5-pro-white-navigation-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -724,7 +726,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Navigation-SunsetOrange-427_600-pc.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Navigation-SunsetOrange-427_600-pc.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -781,7 +783,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Phone-list-product-list-stellar-black-427-x-600.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Phone-list-product-list-stellar-black-427-x-600.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -838,7 +840,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno 10x-navigation-Green-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno 10x-navigation-Green-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -895,7 +897,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno-navigation-Black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -952,7 +954,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno3 Pro-Raphael4G-navigation-Blue-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno3 Pro-Raphael4G-navigation-Blue-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1009,7 +1011,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno3-Lisa4G-navigation-Black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno3-Lisa4G-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1066,7 +1068,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno4 Pro-5G-navigation-Black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno4 Pro-5G-navigation-Black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1123,7 +1125,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno4-5G-navigation-Blue-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno4-5G-navigation-Blue-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1180,7 +1182,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno4-z-navigation-White-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno4-z-navigation-White-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1237,7 +1239,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno5-4G-navigation-black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno5-4G-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1294,7 +1296,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno5-5G-navigation-silver-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno5-5G-navigation-silver-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1351,7 +1353,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno5-pro-chaka-navigation-black-v2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno5-pro-chaka-navigation-black-v2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1408,7 +1410,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/Reno7_navigation-black_2.png.thumb.webp" alt="..." />
+                                                    <img src="./img/Reno7_navigation-black_2.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1465,7 +1467,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex align-items-center justify-content-evenly">
                                                 <div class="p-2">
-                                                    <img src="./img/reno8-pro-glazed-green-427_600-pc.png.thumb.webp" alt="..." />
+                                                    <img src="./img/reno8-pro-glazed-green-427_600-pc.png.thumb.webp" class="img-fluid" alt="..." />
                                                 </div>
                                                 <div class="p-2">
                                                     <div class="text-center">
@@ -1493,7 +1495,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; E-Commerce Shop 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
